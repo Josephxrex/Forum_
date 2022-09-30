@@ -1,29 +1,31 @@
 package Models
 
-class PublicacionSubasta {
+import java.util.*
+
+class PublicacionSubasta: Publicacion {
     //Props
-    var ID: Number = 0
     var precioInicial: Number = 0.0
     var horaInicio:Number = 0
     var horaFin: Number = 0
 
+
     // Constructs
     // Constructor Crear
-    constructor(ID:Number, precioInicial: Number, horaInicio: Number, horaFin: Number, CP: String, Telefono: String, Correo: String, Contrasenia: String, FotoDePerfil: String){
-        this.ID=ID
+    constructor(idPublicacion: Int, nombre: String, descripcion:String, precio:Double,fotos: List<String>,fecha: String, categoria: String, tipo:String,precioInicial: Number, horaInicio: Number, horaFin: Number)
+    :super(idPublicacion,nombre,descripcion,precio, fotos, fecha, categoria, tipo){
         this.precioInicial=precioInicial
         this.horaInicio=horaInicio
         this.horaFin=horaFin
     }
     // Constructor Actualizar
-    constructor(precioInicial: Number, horaInicio: Number, horaFin: Number, CP: String, Telefono: String, Correo: String, Contrasenia: String, FotoDePerfil: String){
+    constructor(nombre: String, descripcion:String, precio:Double,fotos: List<String>,fecha: String, categoria: String, tipo:String,precioInicial: Number, horaInicio: Number, horaFin: Number)
+            :super(nombre,descripcion,precio, fotos, fecha, categoria, tipo){
         this.precioInicial=precioInicial
         this.horaInicio=horaInicio
         this.horaFin=horaFin
     }
     // Constructor Eliminar
-    constructor(ID:Number){
-        this.ID=ID
+    constructor(idPublicacion: Int) :super(idPublicacion){
     }
 
     // Métodos
