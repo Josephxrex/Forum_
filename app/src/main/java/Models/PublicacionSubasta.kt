@@ -1,6 +1,6 @@
 package Models
 
-class PublicaciónSubasta {
+class PublicacionSubasta {
     //Props
     var ID: Number = 0
     var precioInicial: Number = 0.0
