@@ -1,6 +1,6 @@
 package Models
 
-class Publicación {
+class PublicaciónSubasta {
     //Props
     var ID: Number = 0
     var precioInicial: Number = 0.0
@@ -30,10 +30,10 @@ class Publicación {
     private fun establecerPrecio() {
 
     }
-    private fun horaInicio() {
+    private fun establecerhoraInicio() {
 
     }
-    private fun horaFin() {
+    private fun establecerhoraFin() {
 
     }
 }
