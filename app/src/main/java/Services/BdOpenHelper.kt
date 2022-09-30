@@ -20,11 +20,17 @@ class BdOpenHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,nul
     companion object {
         val STRING_TYPE = "text"
         val INT_TYPE = "integer"
+        val DATE_TYPE = "date"
+        val DOUBLE_TYPE ="double"
 
         val CREATE_EVENTOS_SCRIPT = (
-                "create table c_usuario (" +
-                        " id_usuario " + INT_TYPE + " primary key autoincrement," +
-                        " nb_usuario " + STRING_TYPE + " not null," +
-                        " cl_usuario" + STRING_TYPE + " not null)")
+                "create table c_ventas (" +
+                "id_Ventas " + INT_TYPE + " primary key autoincrement," +
+                "nombre_Tienda " + STRING_TYPE + " not null," +
+                "nombre_Cliente" + STRING_TYPE + " not null," +
+                "fecha"+ DATE_TYPE + "not null," +
+                 "subtotal" + DOUBLE_TYPE + "not null," +
+                 "total" + DOUBLE_TYPE + "not null)"
+                )
     }
 }
