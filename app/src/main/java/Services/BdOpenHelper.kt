@@ -20,6 +20,7 @@ class BdOpenHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,nul
     companion object {
         val STRING_TYPE = "text"
         val INT_TYPE = "integer"
+        val DOUBLE_TYPE = "double"
 
         val CREATE_EVENTOS_SCRIPT = (
                 "create table cliente (" +
@@ -33,7 +34,15 @@ class BdOpenHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,nul
                         " foto_cliente " + STRING_TYPE + " not null," +
                         " genero_cliente" + STRING_TYPE + " not null)" +
                         " fechanac_cliente " + STRING_TYPE + " not null," +
-                        " apellido_cliente" + STRING_TYPE + " not null)"
+                        " apellido_cliente" + STRING_TYPE + " not null)"  +
+
+                        "create table venta ("+
+                        " id_venta " + INT_TYPE + " primary key autoincrement," +
+                        " nombre_Tienda " + STRING_TYPE + " not null," +
+                        " nombre_cliente" + STRING_TYPE + " not null)" +
+                        " fecha" + STRING_TYPE + " not null)" +
+                        " subtotal"+ DOUBLE_TYPE + " not null)" +
+                        " total"+ DOUBLE_TYPE + " not null)"
                 )
     }
 }
