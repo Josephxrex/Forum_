@@ -2,9 +2,8 @@ package Models
 
 open class Usuario{
     //Props
-    private var ID:Number = 0
+    private var ID: Number = 0
     private var Nombre: String = ""
-    private var Apellidos: String = ""
     private var Usuario: String = ""
     private var CP: String = ""
     private var Telefono: String = ""
@@ -14,10 +13,8 @@ open class Usuario{
 
     // Constructs
     // Constructor Crear
-    constructor(ID:Number, Nombre: String, Apellidos: String, Usuario: String, CP: String, Telefono: String, Correo: String, Contrasenia: String, FotoDePerfil: String){
-        this.ID=ID
+    constructor(Nombre: String, Usuario: String, CP: String, Telefono: String, Correo: String, Contrasenia: String, FotoDePerfil: String){
         this.Nombre=Nombre
-        this.Apellidos=Apellidos
         this.Usuario=Usuario
         this.CP=CP
         this.Telefono=Telefono
@@ -26,9 +23,9 @@ open class Usuario{
         this.FotoDePerfil=FotoDePerfil
     }
     // Constructor Actualizar
-    constructor(Nombre: String, Apellidos: String, Usuario: String, CP: String, Telefono: String, Correo: String, Contrasenia: String, FotoDePerfil: String){
+    constructor(ID: Number,Nombre: String, Usuario: String, CP: String, Telefono: String, Correo: String, Contrasenia: String, FotoDePerfil: String){
+        this.ID=ID
         this.Nombre=Nombre
-        this.Apellidos=Apellidos
         this.Usuario=Usuario
         this.CP=CP
         this.Telefono=Telefono
@@ -37,9 +34,8 @@ open class Usuario{
         this.FotoDePerfil=FotoDePerfil
     }
     // Constructor Eliminar
-    constructor(ID:Number){
-        this.ID=ID
+    constructor(id:Number) {
+        this.ID = id
     }
+    // Métodos
 }
-
-// Métodos
