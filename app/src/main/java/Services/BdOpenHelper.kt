@@ -37,13 +37,33 @@ class BdOpenHelper(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,nul
                         " apellido_cliente" + STRING_TYPE + " not null)" +
                         " apellido_cliente" + STRING_TYPE + " not null)"  +
 
-                         "create table venta ("+
-                         " id_venta " + INT_TYPE + " primary key autoincrement," +
-                         " nombre_Tienda " + STRING_TYPE + " not null," +
-                         " nombre_cliente" + STRING_TYPE + " not null)" +
-                         " fecha" + STRING_TYPE + " not null)" +
-                         " subtotal"+ DOUBLE_TYPE + " not null)" +
-                         " total"+ DOUBLE_TYPE + " not null)"
-        )
+                        "create table venta ("+
+                        " id_venta " + INT_TYPE + " primary key autoincrement," +
+                        " nombre_Tienda " + STRING_TYPE + " not null," +
+                        " nombre_cliente" + STRING_TYPE + " not null)" +
+                        " fecha" + STRING_TYPE + " not null)" +
+                        " subtotal"+ DOUBLE_TYPE + " not null)" +
+                        " total"+ DOUBLE_TYPE + " not null)" +
+
+                        "create table c_tienda (" +
+                        " idTienda " + INT_TYPE + " primary key autoincrement," +
+                        " nombre_tienda " + STRING_TYPE + " not null," +
+                        " usuario_tienda" + STRING_TYPE + " not null,"  +
+                        " cp_tienda " + INT_TYPE + " not null,"  +
+                        " telefono_tienda " + STRING_TYPE + " not null,"  +
+                        " correo_tienda " + STRING_TYPE + " not null,"  +
+                        " contrasenia_tienda " + STRING_TYPE + " not null,"  +
+                        " fotoPerfil_tienda " + STRING_TYPE + " not null,"  +
+                        " idcategoria_tienda " + INT_TYPE + " not null,"  +
+                        " seguidores_tienda " + INT_TYPE + " not null,"  +
+                        " puntuacion_tienda " + DOUBLE_TYPE + " not null,"  +
+                        " envios_tienda" + "boolean" + " not null)" +
+
+
+                        "create table categoria_tienda (" +
+                        " idCategoria " + INT_TYPE + " primary key autoincrement," +
+                        " categoria" + STRING_TYPE + " not null)"
+                )
+
     }
 }
