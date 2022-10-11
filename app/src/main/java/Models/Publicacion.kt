@@ -5,30 +5,26 @@ class Publicacion {
     val idPublicacion : Int;
     var nombre:String;
     var descripcion:String;
-    var precio:Double;
-    var fotos:List<String>;
     var fecha:String;
-    var categoria:String;
-    var tipo:String;
+    var idCategoria:Int;
+    var idTipo:Int;
 
     constructor(
+        idPublicacion: Int,
         nombre: String,
         descripcion: String,
-        precio: Double,
-        fotos: List<String>,
         fecha: String,
-        categoria: String,
-        tipo: String,
-        idPublicacion: Int
+        idCategoria: Int,
+        idTipo: Int,
+
     ){
+        this.idPublicacion = idPublicacion;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.precio = precio;
-        this.fotos = fotos;
         this.fecha = fecha;
-        this.categoria = categoria;
-        this.tipo = tipo;
-        this.idPublicacion = idPublicacion
+        this.idCategoria = idCategoria;
+        this.idTipo = idTipo;
+
     }
 
     fun init(){
