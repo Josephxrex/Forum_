@@ -3,17 +3,21 @@ package Models
 class Fotos_Publicacion {
 
     val idFotoPublicacion: Int ;
+    val url: String;
+    val nombre_foto: String;
     val idPublicacion: Int;
-    val direccionFoto: String;
 
     constructor(
         idFotoPublicacion: Int,
+        url: String,
+        nombre_foto:String,
         idPublicacion: Int,
-        direccionFoto: String
     ){
         this.idFotoPublicacion = idFotoPublicacion;
+        this.url = url;
+        this.nombre_foto = nombre_foto;
         this.idPublicacion = idPublicacion;
-        this.direccionFoto = direccionFoto;
+
     }
 
     fun init(){
